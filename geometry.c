@@ -1,10 +1,12 @@
 #include <stdio.h> 
 #include <string.h>
 
-int main() {
+int main() 
+{
     char figure[10], circle[] = "circle", triangle[] = "triangle", polygon[] = "polygon";
     float r, perimeter, area;
-    struct coord {
+    struct coord 
+    {
         float x;
         float y;
     };
@@ -12,19 +14,23 @@ int main() {
     struct coord Point1;
     struct coord Point2;
     
-    while(1) {
+    while(1) 
+    {
         printf("Enter input: ");
         getchar();
         int check = scanf(" %s (%f %f, %f)", figure, &Point1.x, &Point2.y, &r);
         getchar();
         
-        if (check != 4) {
+        if (check != 4) 
+        {
             printf("Invalid input\n");
         }
-        else if ((strcmp(figure, circle)) && (strcmp(figure, triangle)) && (strcmp(figure, polygon))) {
+        else if ((strcmp(figure, circle)) && (strcmp(figure, triangle)) && (strcmp(figure, polygon))) 
+        {
             printf("Expected 'circle '\n");
         }
-        else if (!strcmp(figure, circle)) {
+        else if (!strcmp(figure, circle))
+        {
             perimeter=2*3.14*r;
             area = 3.14*r*r; 
             
@@ -34,7 +40,5 @@ int main() {
         }
         printf(" \n");
     }
-        
-    
     return 0; 
 }
