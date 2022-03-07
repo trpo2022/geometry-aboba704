@@ -1,44 +1,85 @@
-#include <stdio.h> 
+#include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
-int main() 
-{
-    char figure[10], circle[] = "circle", triangle[] = "triangle", polygon[] = "polygon";
+int main() {
+    char str[50], circle[] = "circle";
     float r, perimeter, area;
-    struct coord 
-    {
+    int i;
+    
+    typedef struct {
         float x;
         float y;
-    };
+    } Point;
     
-    struct coord Point1;
-    struct coord Point2;
-    
-    while(1) 
-    {
-        printf("Enter input: ");
-        getchar();
-        int check = scanf(" %s (%f %f, %f)", figure, &Point1.x, &Point2.y, &r);
-        getchar();
+    again: while (1) {
+        printf("Input data: ");
+        fgets(str, 50, stdin);
         
-        if (check != 4) 
-        {
-            printf("Invalid input\n");
+        for (i = 0; i < 6; i++) {
+            if (tolower(str[i]) == circle[i])
+                continue;
+            else {
+                printf("Expected 'circle', try again!\n");
+                goto again;
+            }
         }
-        else if ((strcmp(figure, circle)) && (strcmp(figure, triangle)) && (strcmp(figure, polygon))) 
-        {
-            printf("Expected 'circle '\n");
+        
+        if (str[i] == ' ') {
+            printf("Expected no ' ' after circle, try again!\n");
+            goto again;
         }
-        else if (!strcmp(figure, circle))
-        {
-            perimeter=2*3.14*r;
-            area = 3.14*r*r; 
-            
-            printf("%s(%.0f %.0f, %.1f)\n", figure, Point1.x, Point2.y, r);
-            printf("the perimeter of the circle is %.4f\n", perimeter);
-            printf("the area of the circle is %.4f\n", area);
-        }
-        printf(" \n");
+        
+        if (str[i] != '(') {
+            printf("Expected '(' after circle, try again!\n");
+            goto again;
+        } else
+            i++;
+        
+        if (!isdigit(str[i])) {
+            printf("Expected number after '(', try again!\n");
+            goto again;
+        } else
+            i++;
+        
+        for (; isdigit(str[i]) || str[i] == '.'; i++)
+            ;
+        
+        if (str[i] != ' ') {
+            printf("Expected ' ' after X coordninate, try again!\n");
+            goto again;
+        } else
+            i++;
+
+        for (; isdigit(str[i]) || str[i] == '.'; i++)
+        ;
+        
+        if (str[i] != ',') {
+            printf("Expected ',' after Y coordninate, try again!\n");
+            goto again;
+        } else
+            i++;
+        
+        if (str[i] != ' ') {
+            printf("Expected ', ' after Y coordninate, try again!\n");
+            goto again;
+        } else
+            i++;
+        
+        if (!isdigit(str[i])) {
+            printf("Expected number after ', ', try again!\n");
+            goto again;
+        } else
+            i++;
+        
+        for (; isdigit(str[i]) || str[i] == '.'; i++)
+        ;
+
+        if (str[i] != ')') {
+            printf("Expected ')' after Radius, try again!\n");
+            goto again;
+        } else
+            printf("Correct data!\n");
     }
     return 0; 
 }
