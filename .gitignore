@@ -9,3 +9,6 @@ bin/
 *.txt
 # but track input.txt 
 ! input.txt
+# executable files
+*
+!*.* 
