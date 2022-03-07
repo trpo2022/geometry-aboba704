@@ -78,8 +78,10 @@ int main() {
         if (str[i] != ')') {
             printf("Expected ')' after Radius, try again!\n");
             goto again;
-        } else
-            printf("Correct data!\n");
+        } else {
+            printf("%s", str);
+            break;
+        }
     }
     return 0; 
 }
