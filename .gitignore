@@ -9,6 +9,11 @@ bin/
 *.txt
 # but track input.txt 
 ! input.txt
+
 # executable files
-*
-!*.* 
+*.exe
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
