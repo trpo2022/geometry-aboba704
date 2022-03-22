@@ -4,13 +4,7 @@
 
 int main() {
     char str[50], circle[] = "circle";
-    float r, perimeter, area;
     int i;
-    
-    typedef struct {
-        float x;
-        float y;
-    } Point;
     
     again: while (1) {
         printf("Input data: ");
