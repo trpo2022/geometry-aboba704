@@ -1,7 +1,13 @@
-all: geometry
-geometry: geometry.c
-	gcc -Wall -Werror -o geometry.exe geometry.c
+CFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -MMD
+
+all: bin/geometry
+	
+bin/geometry: obj/geometry.o
+	gcc $(CFLAGS) -o $@ $^
+	
+obj/geometry.o: src/geometry/geometry.c
+	gcc -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+		
 clean:
-	rm geometry.exe
-run:
-	./geometry.exe
+	rm bin/* obj/*
