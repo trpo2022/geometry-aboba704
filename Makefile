@@ -1,5 +1,5 @@
 APP_NAME = geometry
-LIB_NAME = libgeo
+LIB_NAME = libgeometry
 
 CFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -I src -MP -MMD
