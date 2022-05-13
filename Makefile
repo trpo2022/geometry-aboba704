@@ -38,7 +38,7 @@ obj/%.o: %.c
 	
 .PHONY: test
 test: $(TEST_PATH)
-	./$(BIN_DIR)/$(TEST_NAME)
+	./bin/test
 	
 -include $(DEPS)
 
