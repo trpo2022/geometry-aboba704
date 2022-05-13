@@ -45,6 +45,9 @@ test: $(TEST_PATH)
 $(TEST_PATH): $(TEST_OBJECTS) $(LIB_PATH)
 	gcc $(CFLAGS) $(CPPFLAGS) $(CPPFLAGST) $^ $(MYFLAG) -o $@
 	
+obj/test/%.o: $(TEST_PATH)/%.c $(LIB_PATH)
+	gcc -c $(CFLAGS) $(CPPFLAGS) $(CPPFLAGST) $< $(MYFLAG) -o $@
+	
 .PHONY: clean
 clean:
 	$(RM) $(APP_PATH) $(LIB_PATH) $(TEST_PATH)

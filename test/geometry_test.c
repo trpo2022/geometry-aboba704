@@ -1,4 +1,4 @@
-#include <ctest.h>
+#include <thirdparty/ctest.h>
 #include <libgeometry/intersections.h>
 
 CTEST(geometry_test, circle_intersection)
