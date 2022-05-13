@@ -29,10 +29,10 @@ int intersection(char* cx1, char* cy1,
 int printIntersection(int t)
 {
 	if (t == 1)
-		printf("Circle touch to each other");
+		printf("Circle touch to each other\n");
 	else if (t < 0)
-		printf("Circle not touch to each other");
+		printf("Circle not touch to each other\n");
 	else
-		printf("Circle intersect to each other");
+		printf("Circle intersect to each other\n");
 	return 0;
 }
