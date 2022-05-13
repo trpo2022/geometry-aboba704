@@ -1,3 +1,3 @@
 #pragma once
 
-void *inputString(char *str);
+void* inputString(char* str);

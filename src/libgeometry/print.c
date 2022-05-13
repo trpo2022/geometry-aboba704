@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void printCircle(char *str, char *rad)
+void printCircle(char* str, char* rad)
 {
 	float r, p, s;
 	r = atoi(rad);
