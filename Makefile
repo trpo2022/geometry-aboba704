@@ -45,9 +45,6 @@ test: $(TEST_PATH)
 $(TEST_PATH): $(TEST_OBJECTS) $(LIB_PATH)
 	gcc $(CFLAGS) $(CPPFLAGS) $(CPPFLAGST) $^ $(MYFLAG) -o $@
 	
-obj/test/%.o: test/%.c $(LIB_PATH)
-	gcc -c $(CFLAGS) -I thirdparty/ $(CPPFLAGS) $< -o $@
-	
 .PHONY: clean
 clean:
 	$(RM) $(APP_PATH) $(LIB_PATH) $(TEST_PATH)
