@@ -38,8 +38,7 @@ int main() {
         } else
             i++;
         
-        for (n = 0; isdigit(str[i]) || str[i] == '.'; i++, n++) //
-        {
+        for (n = 0; isdigit(str[i]) || str[i] == '.'; i++, n++) {
             if (numOfCircles == 0)
                 x1[n] = str[i - 1];
             else
@@ -56,8 +55,7 @@ int main() {
         } else
             i++;
 
-        for (; isdigit(str[i]) || str[i] == '.'; i++) //
-        {
+        for (; isdigit(str[i]) || str[i] == '.'; i++) {
             if (numOfCircles == 0)
                 y1[n] = str[i - 1];
             else
@@ -82,8 +80,7 @@ int main() {
         } else
             i++;
         
-        for (n = 0; isdigit(str[i]) || str[i] == '.'; i++, n++)
-        {
+        for (n = 0; isdigit(str[i]) || str[i] == '.'; i++, n++) {
             if (numOfCircles == 0)
                 rad1[n] = str[i - 1];
             else
