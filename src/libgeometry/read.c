@@ -3,6 +3,6 @@
 
 void* inputString(char* str)
 {
-	fgets(str, 50, stdin);
-	return NULL;
+    fgets(str, 50, stdin);
+    return NULL;
 }

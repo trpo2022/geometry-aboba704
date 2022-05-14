@@ -1,15 +1,17 @@
+#include <ctype.h>
 #include <libgeometry/intersections.h>
 #include <libgeometry/print.h>
 #include <libgeometry/read.h>
-#include <ctype.h>
 #include <stdio.h>
 
 int main()
 {
-    char str[50], circle[] = "circle", rad1[10], rad2[10], x1[10], y1[10], x2[10], y2[10];
+    char str[50], circle[] = "circle", rad1[10], rad2[10], x1[10], y1[10],
+        x2[10], y2[10];
     int i, n, numOfCircles = 0;
     
-    again: while (numOfCircles < 2) {
+again:
+    while (numOfCircles < 2) {
         printf("Input data: ");
         inputString(str);
         
