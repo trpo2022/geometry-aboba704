@@ -1,7 +1,7 @@
 #include "../thirdparty/ctest.h"
 #include <libgeometry/intersections.h>
 
-CTEST(geometry_test, circle_intersection0)
+CTEST(geometry_test, circle_intersection_intersect)
 {
     char* x1 = "0";
     char* y1 = "0";
@@ -15,7 +15,7 @@ CTEST(geometry_test, circle_intersection0)
     ASSERT_EQUAL(expect, res);
 }
 
-CTEST(geometry_test, circle_intersection-1)
+CTEST(geometry_test, circle_intersection_not)
 {
     char* x1 = "3";
     char* y1 = "4";
@@ -29,7 +29,7 @@ CTEST(geometry_test, circle_intersection-1)
     ASSERT_EQUAL(expect, res);
 }
 
-CTEST(geometry_test, circle_intersection1)
+CTEST(geometry_test, circle_intersection_touch)
 {
     char* x1 = "-10";
     char* y1 = "8";
