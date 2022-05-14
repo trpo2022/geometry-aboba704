@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int intersection(
-        char *cx1, char *cy1, char *cx2, char *cy2, char *cr1, char *cr2)
+        char* cx1, char* cy1, char* cx2, char* cy2, char* cr1, char* cr2)
 {
     int x1, y1, x2, y2, r1, r2;
 
