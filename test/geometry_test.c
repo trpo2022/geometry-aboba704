@@ -17,12 +17,12 @@ CTEST(geometry_test, circle_intersection_intersect)
 
 CTEST(geometry_test, circle_intersection_not)
 {
-    char* x1 = "3";
-    char* y1 = "4";
-    char* x2 = "14";
-    char* y2 = "8";
-    char* rad1 = "5";
-    char* rad2 = "8";
+    char* x1 = "100";
+    char* y1 = "100";
+    char* x2 = "0";
+    char* y2 = "0";
+    char* rad1 = "1";
+    char* rad2 = "1";
     
     const int expect = -1;
     int res = intersection(x1, y1, x2, y2, rad1, rad2);
