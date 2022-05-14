@@ -7,7 +7,7 @@
 int main()
 {
     char str[50], circle[] = "circle", rad1[10], rad2[10], x1[10], y1[10],
-                x2[10], y2[10];
+                  x2[10], y2[10];
     int i, n, numOfCircles = 0;
 
 again:
